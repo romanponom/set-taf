@@ -8,6 +8,7 @@
 *.log.*
 *.ipr
 *.iws
+out
 
 # Gradle
 .gradle

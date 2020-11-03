@@ -1,15 +1,18 @@
 package api.test;
 
+import com.epam.reportportal.junit5.ReportPortalExtension;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import entity.User;
 import io.restassured.http.ContentType;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.junit.jupiter.api.extension.ExtendWith;
 
 import static io.restassured.RestAssured.given;
 
-public class AbstractTest {
+@ExtendWith({ReportPortalExtension.class})
+public abstract class AbstractTest {
     private static final Logger LOGGER = LogManager.getLogger(AbstractTest.class);
     protected static final String HOST = "http://localhost:8082/api";
     protected static final String ALL_USERS_ENDPOINT = "/all";
